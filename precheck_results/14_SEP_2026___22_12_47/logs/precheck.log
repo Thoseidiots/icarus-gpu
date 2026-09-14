@@ -1,0 +1,2 @@
+2026-09-14 22:12:47 [INFO] Extracting compressed files in: /tmp/tmp49svb3l5/repo
+2026-09-14 22:12:47 [CRITICAL] make uncompress reported success (exit 0) but produced no gds/*.gds files in /tmp/tmp49svb3l5/repo/gds. stderr tail: find: ‘./gds’: No such file or directory | stdout tail: All files are uncompressed!
