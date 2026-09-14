@@ -1,0 +1,9 @@
+{
+  "DESIGN_NAME": "user_proj_example",
+  "VERILOG_FILES": ["dir::../../verilog/rtl/user_proj_example.v", "dir::../../verilog/rtl/defines.v", "dir::../../rtl/top/icarus_gpu_top_yosys.v"],
+  "CLOCK_PORT": "wb_clk_i",
+  "CLOCK_PERIOD": 10,
+  "FP_SIZING": "absolute",
+  "DIE_AREA": "0 0 800 800",
+  "PL_TARGET_DENSITY": 0.5
+}
