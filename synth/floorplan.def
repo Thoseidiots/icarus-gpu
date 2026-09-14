@@ -1,0 +1,3 @@
+VERSION 5.8 ;
+DESIGN icarus_gpu_top ;
+DIEAREA ( 0 0 ) ( 8000 8000 ) ;

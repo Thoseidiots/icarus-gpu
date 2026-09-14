@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Capture Scrubber — Live Instance</title>
+<style>body{font-family:system-ui;padding:24px;max-width:900px}input[type=range]{width:100%}pre{background:#f1f3f5;padding:12px;white-space:pre-wrap}#bar{height:8px;background:#d0ebff;position:relative;margin:12px 0}#pos{position:absolute;top:0;bottom:0;width:2px;background:red}</style></head>
+<body>
+<h1>Live Instance Capture — Scrub Like Video</h1>
+<p>Running code captured via <code>capture.py</code> → 60 cycles. Drag to seek, like video timeline. No re-execution.</p>
+<input type="range" id="scrub" min="0" max="59" value="0">
+<div id="bar"><div id="pos" style="left:0%"></div></div>
+<pre id="log"></pre>
+<script>
+let trace=null;
+fetch('capture.trace.json').then(r=>r.json()).then(j=>{
+  trace=j; update(0);
+});
+function update(cycle){
+  const f=trace.frames[cycle];
+  document.getElementById('log').textContent=
+`Cycle ${f.cycle} / ${trace.meta.total_cycles-1}  @ ${f.timestamp_ps}ps  pc=0x${f.pc.toString(16)}
+dot=${f.dot.toFixed(1)}  fb_pixels=${f.fb_pixels ?? '(no snapshot — non-render cycle)'}
+Seekable: jumped to ${cycle} without re-running cycles 0..${cycle-1}`;
+  document.getElementById('pos').style.left=(cycle/59*100)+'%';
+}
+document.getElementById('scrub').oninput=e=>update(parseInt(e.target.value));
+</script>
+</body></html>

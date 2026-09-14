@@ -1,0 +1,11 @@
+# ignore large binaries/pdk
+oss-cad-suite-windows-x64-20260914/
+yosys-main/
+skywater-pdk-main/
+OpenROAD-master/
+reference/
+*.zip
+*.gds
+__pycache__/
+.cache/
+frame.ppm
