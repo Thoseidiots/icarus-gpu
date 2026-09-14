@@ -1,0 +1,30 @@
+2026-09-14 22:01:14 [INFO] Extracting compressed files in: /tmp/tmpfi46b7uq/repo
+2026-09-14 22:01:14 [INFO] make uncompress produced 2 gds/*.gds file(s): user_proj_example.gds, user_project_wrapper.gds (make exit 0)
+2026-09-14 22:01:14 [INFO] Project type: digital
+2026-09-14 22:01:14 [INFO] GDS hash (user_project_wrapper): d3fee28b3471420ebd6dc403364cf37a9f9ec81d
+2026-09-14 22:01:14 [INFO] Tools: KLayout v0.29.2 | Magic v8.3.471
+2026-09-14 22:01:14 [INFO] PDK: SKY130A unknown
+2026-09-14 22:01:14 [INFO] Running 14 checks: [topcell_check, gpio_defines, xor, magic_drc, klayout_feol, klayout_beol, klayout_offgrid, klayout_met_min_ca_density, klayout_pin_label_purposes_overlapping_drawing, klayout_zeroarea, spike_check, illegal_cellname_check, lvs, oeb]
+2026-09-14 22:01:14 [ERROR] Top Cell raised an exception: Stream has unknown format: /tmp/tmpfi46b7uq/repo/gds/user_project_wrapper.gds in Layout.read
+2026-09-14 22:01:14 [WARNING] User defines file /tmp/tmpfi46b7uq/repo/verilog/rtl/user_defines.v not readable
+2026-09-14 22:01:14 [ERROR] GPIO defines check failed due to 1 error(s)
+2026-09-14 22:01:15 [ERROR] Top cell name user_project_wrapper not found
+2026-09-14 22:01:16 [INFO] Found 0 violations
+2026-09-14 22:01:16 [INFO] 0 DRC violations
+2026-09-14 22:01:16 [INFO] Running: klayout -b -r /usr/local/lib/python3.9/site-packages/cf_precheck/drc_scripts/sky130A_mr.drc -rd input=/tmp/tmpfi46b7uq/repo/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/outputs/reports/klayout_feol_check.xml -rd thr=2 -rd feol=true
+2026-09-14 22:01:16 [ERROR] klayout_feol failed (stat=1), see /tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/logs/klayout_feol_check.log
+2026-09-14 22:01:16 [INFO] Running: klayout -b -r /usr/local/lib/python3.9/site-packages/cf_precheck/drc_scripts/sky130A_mr.drc -rd input=/tmp/tmpfi46b7uq/repo/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/outputs/reports/klayout_beol_check.xml -rd thr=2 -rd beol=true
+2026-09-14 22:01:17 [ERROR] klayout_beol failed (stat=1), see /tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/logs/klayout_beol_check.log
+2026-09-14 22:01:17 [INFO] Running: klayout -b -r /usr/local/lib/python3.9/site-packages/cf_precheck/drc_scripts/sky130A_mr.drc -rd input=/tmp/tmpfi46b7uq/repo/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/outputs/reports/klayout_offgrid_check.xml -rd thr=2 -rd offgrid=true
+2026-09-14 22:01:18 [ERROR] klayout_offgrid failed (stat=1), see /tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/logs/klayout_offgrid_check.log
+2026-09-14 22:01:18 [INFO] Running: klayout -b -r /usr/local/lib/python3.9/site-packages/cf_precheck/drc_scripts/met_min_ca_density.lydrc -rd input=/tmp/tmpfi46b7uq/repo/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/outputs/reports/klayout_met_min_ca_density_check.xml -rd thr=2
+2026-09-14 22:01:19 [ERROR] klayout_met_min_ca_density failed (stat=1), see /tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/logs/klayout_met_min_ca_density_check.log
+2026-09-14 22:01:19 [INFO] Running: klayout -b -r /usr/local/lib/python3.9/site-packages/cf_precheck/drc_scripts/pin_label_purposes_overlapping_drawing.rb.drc -rd input=/tmp/tmpfi46b7uq/repo/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/outputs/reports/klayout_pin_label_purposes_overlapping_drawing_check.xml -rd thr=2 -rd top_cell_name=user_project_wrapper
+2026-09-14 22:01:20 [ERROR] klayout_pin_label_purposes_overlapping_drawing failed (stat=1), see /tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/logs/klayout_pin_label_purposes_overlapping_drawing_check.log
+2026-09-14 22:01:20 [INFO] Running: klayout -b -r /usr/local/lib/python3.9/site-packages/cf_precheck/drc_scripts/zeroarea.rb.drc -rd input=/tmp/tmpfi46b7uq/repo/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/outputs/reports/klayout_zeroarea_check.xml -rd thr=2 -rd cleaned_output=/tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/outputs/user_project_wrapper_no_zero_areas.gds
+2026-09-14 22:01:21 [ERROR] klayout_zeroarea failed (stat=1), see /tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/logs/klayout_zeroarea_check.log
+2026-09-14 22:01:21 [INFO] Running: bash /usr/local/lib/python3.9/site-packages/cf_precheck/drc_scripts/gdsArea0 -V -m /tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/outputs/reports/spike_check.xml /tmp/tmpfi46b7uq/repo/gds/user_project_wrapper.gds
+2026-09-14 22:01:22 [ERROR] Spike check failed (stat=1), see /tmp/tmpfi46b7uq/repo/precheck_results/14_SEP_2026___22_01_14/logs/spike_check.log
+2026-09-14 22:01:22 [ERROR] Illegal Cellname raised an exception: Stream has unknown format: /tmp/tmpfi46b7uq/repo/gds/user_project_wrapper.gds in Layout.read
+2026-09-14 22:01:22 [ERROR] LVS FAILED: could not find LVS configuration file /tmp/tmpfi46b7uq/repo/lvs/user_project_wrapper/lvs_config.json
+2026-09-14 22:01:22 [ERROR] OEB FAILED: could not find LVS configuration file /tmp/tmpfi46b7uq/repo/lvs/user_project_wrapper/lvs_config.json
