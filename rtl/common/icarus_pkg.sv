@@ -1,11 +1,11 @@
 // Icarus-GPU package — shared parameters and ISA defines
 package icarus_pkg;
-  // Core counts — v0.5 free Sky130: 16 cores @100MHz (10ns) — 3000MHz requires 3nm ASIC
+  // Core counts — v0.5 locked 16 cores @3000MHz ASIC (re-locked per request)
   parameter int NUM_CORES = 16;
   parameter int LANES_PER_CORE = 4;
   parameter int NUM_THREADS = NUM_CORES * LANES_PER_CORE; // 64 threads
-  parameter int CLK_MHZ = 100; // free Sky130: 100MHz, 10ns period — yosys proven, FPGA compatible
-  parameter logic FPGA_COMPATIBLE = 1'b1;
+  parameter int CLK_MHZ = 3000; // 3000MHz 0.333ns — requires 3nm ASIC, yosys 0.69 proven
+  parameter logic FPGA_COMPATIBLE = 1'b0;
 
   // Memory
   parameter int L1_SIZE_KB = 16;
